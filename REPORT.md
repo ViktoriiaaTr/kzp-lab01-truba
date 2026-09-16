@@ -107,7 +107,7 @@
 | #9    | feature       | Сформувати звіт (консоль + файл)              | 97c98b0a6eb0766668bcaa06debd1a0f1398ba4f |
 | #10   | feature       | Додати підтримку аргументів командного рядка  | 97c98b0a6eb0766668bcaa06debd1a0f1398ba4f |
 | #11   | test          | Написати юніт-тести для Parser і Calculator   |  |
-| #12   | documentation | Додати документацію (README, REPORT, Javadoc) |  |
+| #12   | documentation | Додати документацію (README, REPORT, Javadoc) | 03eb4c06db1692bb7cc041dce851f0505ff43c05 |
 | #13   | bug           | Виявити та зафіксувати помилки                |  |
 
 ## 7. Приклади роботи
