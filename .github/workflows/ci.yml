@@ -26,6 +26,10 @@ jobs:
           java-version: '21'
           cache: maven
 
+      - name: Make mvnw executable on Unix
+        if: runner.os != 'Windows'
+        run: chmod +x mvnw
+
       - name: Show CI build number
         run: echo "CI build ${{ github.run_number }}"
 
