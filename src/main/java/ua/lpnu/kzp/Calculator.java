@@ -2,11 +2,26 @@ package ua.lpnu.kzp;
 
 import java.util.List;
 
+/**
+ * Клас для обчислення чотирьох показників:
+ * <ul>
+ *   <li>кількість коректних записів;</li>
+ *   <li>загальний еквівалент у гривнях;</li>
+ *   <li>середній курс валют;</li>
+ *   <li>кількість операцій купівлі.</li>
+ * </ul>
+ */
 public final class Calculator {
 
     private Calculator() {
     }
 
+    /**
+     * Обчислює показники на основі списку коректних записів.
+     *
+     * @param records список коректних записів
+     * @return новий об'єкт {@link Statistics} з результатами обчислень
+     */
     public static Statistics calculate(List<CurrencyRecord> records) {
         int validCount = records.size();
 

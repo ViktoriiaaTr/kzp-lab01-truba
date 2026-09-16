@@ -5,6 +5,11 @@ import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Точка входу програми.
+ * <p> Читає CSV-файл, перевіряє записи, обчислює показники та формує звіт
+ * у консоль і текстовий файл.</p>
+ */
 public final class Main {
 
     private static final String VERSION = "1.0.0";
@@ -14,6 +19,11 @@ public final class Main {
     private Main() {
     }
 
+    /**
+     * Головний метод, який запускає програму.
+     * 
+     * @param args аргументи командного рядка: --help, --version, --input, --output
+     */
     public static void main(String[] args) {
         Path input = DEFAULT_INPUT;
         Path output = DEFAULT_OUTPUT;
@@ -85,6 +95,9 @@ public final class Main {
         }
     }
 
+    /**
+     * Виводить довідку про використання програми.
+     */
     private static void printHelp() {
         System.out.println("Використання: java -jar lab01-1.0.0.jar [--help] [--version] [--input <файл>] [--output <файл>]");
         System.out.println("  --help            показати цю довідку");

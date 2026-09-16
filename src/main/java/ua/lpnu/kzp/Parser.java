@@ -1,10 +1,20 @@
 package ua.lpnu.kzp;
 
+/**
+ * Клас для розбору та валідації одного рядка CSV.
+ */
 public final class Parser {
 
     private Parser() {
     }
 
+    /**
+     * Розбирає один рядок CSV та повертає запис.
+     *
+     * @param line рядок у форматі currency;amount;rate;buy
+     * @return об'єкт {@link CurrencyRecord}
+     * @throws IllegalArgumentException якщо рядок некоректний
+     */
     public static CurrencyRecord parseLine(String line) {
         if (line == null || line.isBlank()) {
             throw new IllegalArgumentException("порожній рядок");
