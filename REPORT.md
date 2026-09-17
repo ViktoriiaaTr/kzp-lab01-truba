@@ -22,8 +22,8 @@
 | № | Поле     | Тип     | Правило валідації                  |
 | - | ---      | ---     | ---                                |
 | 1 | currency | String  | Не порожній рядок                  |
-| 2 | amount   | double  | Число не може бути від'ємним (> 0) |
-| 3 | rate     | double  | Число не може бути від'ємним (> 0) |
+| 2 | amount   | double  | Число > 0                          |
+| 3 | rate     | double  | Число > 0                          |
 | 4 | buy      | boolean | Повинно бути true або false        |
 
 **Обчислювані показники:**
@@ -101,14 +101,14 @@
 | #3    | infra         | Підключити JUnit 5                            | 1acd235e15acae8753e8bca0b1359ea3d9882edf |
 | #4    | infra         | Налаштувати статичний аналізатор (SpotBugs)   | 1acd235e15acae8753e8bca0b1359ea3d9882edf |
 | #5    | infra         | Налаштувати створення виконуваного JAR        | 1acd235e15acae8753e8bca0b1359ea3d9882edf |
-| #6    | infra         | Налаштувати GitHub Actions (CI)               |  |
+| #6    | infra         | Налаштувати GitHub Actions (CI)               | 697f53be1e375c3c80021c2540052ec435f97dc1 |
 | #7    | feature       | Реалізувати читання та перевірку записів      | f7b098d5ba91328a18ca514e29f6c21295bae246 |
 | #8    | feature       | Реалізувати обчислення чотирьох показників    | cb9a7301eb32fabe22dd9e22ce8cc33eab59b606 |
 | #9    | feature       | Сформувати звіт (консоль + файл)              | 97c98b0a6eb0766668bcaa06debd1a0f1398ba4f |
 | #10   | feature       | Додати підтримку аргументів командного рядка  | 97c98b0a6eb0766668bcaa06debd1a0f1398ba4f |
-| #11   | test          | Написати юніт-тести для Parser і Calculator   |  |
+| #11   | test          | Написати юніт-тести для Parser і Calculator   | b9526cd84f3dc869ce46e8191e1755ba34477f2f |
 | #12   | documentation | Додати документацію (README, REPORT, Javadoc) | 03eb4c06db1692bb7cc041dce851f0505ff43c05 |
-| #13   | bug           | Виявити та зафіксувати помилки                |  |
+| #13   | bug           | Виявити та зафіксувати помилки                | b0cc46160f384adae038e08175fbffab66467835 |
 
 ## 7. Приклади роботи
 
