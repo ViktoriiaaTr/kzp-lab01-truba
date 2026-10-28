@@ -13,20 +13,13 @@ public final class Reporter {
     private Reporter() {
     }
 
-    /**
-     * Формує текстовий звіт, що містить чотири показники та перелік помилок.
-     *
-     * @param stats  об'єкт {@link Statistics} з обчисленими показниками
-     * @param errors список повідомлень про некоректні рядки (кожен містить номер рядка та причину)
-     * @return відформатований звіт у вигляді рядка
-     */
-    public static String formatReport(Statistics stats, List<String> errors) {
+    public static String formatReport(ExchangeSummary stats, List<String> errors) {
         StringBuilder builder = new StringBuilder();
 
-        builder.append(String.format(Locale.ROOT, "Коректних записів: %d%n", stats.getValidCount()));
-        builder.append(String.format(Locale.ROOT, "Сумарний еквівалент: %.2f грн%n", stats.getTotalEquivalent()));
-        builder.append(String.format(Locale.ROOT, "Середній курс: %.2f%n", stats.getAverageRate()));
-        builder.append(String.format(Locale.ROOT, "Операцій купівлі: %d%n", stats.getBuyCount()));
+        builder.append(String.format(Locale.ROOT, "Коректних записів: %d%n", stats.validCount()));
+        builder.append(String.format(Locale.ROOT, "Сумарний еквівалент: %.2f грн%n", stats.totalEquivalent()));
+        builder.append(String.format(Locale.ROOT, "Середній курс: %.2f%n", stats.averageRate()));
+        builder.append(String.format(Locale.ROOT, "Операцій купівлі: %d%n", stats.buyCount()));
         builder.append(String.format(Locale.ROOT, "Помилок: %d%n", errors.size()));
 
         for (String error : errors) {

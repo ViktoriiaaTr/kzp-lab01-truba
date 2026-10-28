@@ -69,21 +69,21 @@ public final class Main {
             return;
         }
 
-        List<CurrencyRecord> records = new ArrayList<>();
+        List<ExchangeOperation> records = new ArrayList<>();
         List<String> errors = new ArrayList<>();
 
         for (int i = 0; i < lines.size(); i++) {
             String line = lines.get(i);
             try {
-                CurrencyRecord record = Parser.parseLine(line);
+                ExchangeOperation record = ExchangeOperation.fromCsv(line);
                 records.add(record);
             } catch (IllegalArgumentException exception) {
                 errors.add("Рядок " + (i + 1) + ": " + exception.getMessage());
             }
         }
 
-        Statistics statistics = Calculator.calculate(records);
-        String report = Reporter.formatReport(statistics, errors);
+        ExchangeSummary summary = Calculator.calculate(records);
+        String report = Reporter.formatReport(summary, errors);
 
         System.out.print(report);
 
